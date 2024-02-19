@@ -121,7 +121,8 @@ const phoneNumberInput = document.getElementById("phone-number-input");
 phoneNumberInput.addEventListener("keyup", () => {
     const nextBtn = document.getElementById("next-btn");
     const value = phoneNumberInput.value;
-    if(value.length >= 1){
+
+    if(value.length >= 1 && isNaN(value) === false){
         nextBtn.disabled = false;
     } else {
         nextBtn.disabled = true;
